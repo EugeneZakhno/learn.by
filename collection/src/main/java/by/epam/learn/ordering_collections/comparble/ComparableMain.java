@@ -1,4 +1,4 @@
-package by.epam.learn.ordering_collections;
+package by.epam.learn.ordering_collections.comparble;
 
 import java.util.TreeSet;
 

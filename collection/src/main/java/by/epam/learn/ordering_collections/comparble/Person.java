@@ -1,14 +1,40 @@
-package by.epam.learn.ordering_collections;
+package by.epam.learn.ordering_collections.comparble;
+
+import java.util.Comparator;
 
 public class Person implements Comparable<Person> {
 
     private int personalId;
     private String name = "";
 
+    public int getPersonalId() {
+        return personalId;
+    }
+
+    public void setPersonalId(int personalId) {
+        this.personalId = personalId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Person(int personalId, String name) {
         this.personalId = personalId;
         this.name = name;
     }
+
+    public static class NameComparator implements Comparator<Person> {
+        @Override
+        public int compare(Person o1, Person o2) {
+            return o1.getName().compareTo(o2.getName());
+        }
+    }
+
 
     public int compareTo(Person o) {
      /*   //ascending order
